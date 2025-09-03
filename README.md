@@ -34,7 +34,10 @@ Acesse a landing page e interaja com o chat do agente no canto inferior direito:
 ---
 
 ## Stack Principal
-Typebot | GPTMaker | HTML/CSS | GitHub Pages
+<span style="display:inline-block; background:#0d6efd; color:white; padding:5px 12px; border-radius:5px; margin-right:5px;">Typebot</span>
+<span style="display:inline-block; background:#6610f2; color:white; padding:5px 12px; border-radius:5px; margin-right:5px;">GPTMaker</span>
+<span style="display:inline-block; background:#198754; color:white; padding:5px 12px; border-radius:5px; margin-right:5px;">HTML/CSS</span>
+<span style="display:inline-block; background:#fd7e14; color:white; padding:5px 12px; border-radius:5px;">GitHub Pages</span>
 
 ---
 
@@ -42,4 +45,3 @@ Typebot | GPTMaker | HTML/CSS | GitHub Pages
 - [Clínica BMD](https://clinicabmd.com.br)  
 - [Synk AI](https://synk.ai)  
 - [GitHub do projeto](https://github.com/lidimoura/agente-bmd)
-
