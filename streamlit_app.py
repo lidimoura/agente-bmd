@@ -62,7 +62,10 @@ st.header("Converse com o Agente BMD")
 st.markdown("Use o chat abaixo para interagir com o agente em estilo bubble:")
 
 # Substitua pela URL do seu webchat bubble GPTMaker
-gptmaker_url = "URL_DO_CHATGPTMAKER"
+gptmaker_url = "<script 
+ async 
+ src="https://app.gptmaker.ai/widget/3E6A303F3BAA7072AAC7C247DD2D37A8/float.js">
+</script>"
 
 st.markdown(
     f'<iframe src="{gptmaker_url}" width="100%" height="600px" style="border-radius:10px;"></iframe>',
