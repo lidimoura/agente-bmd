@@ -1,46 +1,79 @@
 import streamlit as st
 import json
 
+# ------------------------------
 # Configuração da página
-st.set_page_config(page_title="Agente BMD", layout="wide", page_icon=":robot:")
+# ------------------------------
+st.set_page_config(
+    page_title="Agente BMD",
+    layout="wide",
+    page_icon="🤖"
+)
 
-# Cabeçalho
+# ------------------------------
+# Cabeçalho / Hero
+# ------------------------------
 with st.container():
-    col1, col2 = st.columns([1, 4])
+    col1, col2 = st.columns([1,4])
     with col1:
-        st.image("assets/logo_synk.png", width=80)
+        st.image("assets/logo_bmd.png", width=80)
     with col2:
         st.title("Agente BMD")
-        st.markdown("Apresentado pela **Synk AI** – Assistente inteligente para otimizar processos da Clínica BMD")
+        st.markdown(
+            "Apresentado pela **Synk AI** – Assistente inteligente para otimizar processos da Clínica BMD"
+        )
 
 st.markdown("---")
 
-# Dashboard de métricas
-with st.container():
-    st.header("Métricas Principais")
-    with open("dashboard/dashboard_mock.json", "r") as f:
-        dashboard = json.load(f)
-
-    cols = st.columns(5)
-    cols[0].metric("Tempo Economizado (mês)", dashboard["tempo_economizado_mes"])
-    cols[1].metric("Custo Reduzido (mês)", dashboard["custo_reduzido_mes"])
-    cols[2].metric("Pacientes atendidos a mais", dashboard["pacientes_atendidos_a_mais"])
-    cols[3].metric("Eficiência projetada", dashboard["eficiencia_projetada"])
-    cols[4].metric("Qualidade do tempo operacional", dashboard["qualidade_tempo_operacional"])
+# ------------------------------
+# Evolução do projeto
+# ------------------------------
+st.header("Evolução do Agente BMD")
+st.markdown("""
+| Etapa | Descrição |
+|-------|-----------|
+| Protótipo Typebot | Primeira versão do agente, focada em coleta de informações básicas |
+| GPTMaker Bubble | Versão atual, chat interativo com estilo bubble e respostas humanizadas |
+| Próximos Passos | Melhorias na automação, memória persistente e integração com Supabase |
+""")
 
 st.markdown("---")
 
-# Webchat GPTMaker
-st.header("Chat Interativo")
-st.markdown("Converse com o agente BMD diretamente:")
+# ------------------------------
+# Métricas principais
+# ------------------------------
+st.header("Métricas Simuladas")
+with open("dashboard/dashboard_mock.json", "r") as f:
+    dashboard = json.load(f)
+
+cols = st.columns(5)
+cols[0].metric("Tempo Economizado (mês)", dashboard.get("tempo_economizado_mes", "N/A"))
+cols[1].metric("Custo Reduzido (mês)", dashboard.get("custo_reduzido_mes", "N/A"))
+cols[2].metric("Pacientes atendidos a mais", dashboard.get("pacientes_atendidos_a_mais", "N/A"))
+cols[3].metric("Eficiência projetada", dashboard.get("eficiencia_projetada", "N/A"))
+cols[4].metric("Qualidade do tempo operacional", dashboard.get("qualidade_tempo_operacional", "N/A"))
+
+st.markdown("---")
+
+# ------------------------------
+# Chat Interativo GPTMaker
+# ------------------------------
+st.header("Converse com o Agente BMD")
+st.markdown("Use o chat abaixo para interagir com o agente em estilo bubble:")
+
+# Substitua pela URL do seu webchat bubble GPTMaker
+gptmaker_url = "URL_DO_CHATGPTMAKER"
+
 st.markdown(
-    '<iframe src="URL_DO_CHATGPTMAKER" width="100%" height="600px" style="border-radius:10px;"></iframe>',
+    f'<iframe src="{gptmaker_url}" width="100%" height="600px" style="border-radius:10px;"></iframe>',
     unsafe_allow_html=True
 )
 
 st.markdown("---")
 
+# ------------------------------
 # Rodapé
+# ------------------------------
 st.markdown(
     "Links Úteis: [Clínica BMD](https://clinicabmd.com.br) | [Synk AI](https://synk.ai) | [GitHub](https://github.com/lidimoura/agente-bmd)"
 )
