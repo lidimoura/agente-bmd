@@ -1,18 +1,43 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Agente BMD", layout="wide", page_icon="🤖")
 
+# Cabeçalho
+st.image("assets/logo_bmd.png", width=80)
 st.title("Agente BMD")
+st.markdown("Apresentado pela **Synk AI** – Assistente inteligente para otimizar processos na Clínica BMD")
 
-# Controle para carregar o chat apenas uma vez
-if "chat_loaded" not in st.session_state:
-    st.session_state.chat_loaded = False
+st.markdown("---")
 
-if st.button("Iniciar Chat") or st.session_state.chat_loaded:
-    st.session_state.chat_loaded = True
-    gptmaker_url = "URL_DO_SEU_CHATGPTMAKER"
-    components.html(
-        f'<iframe src="{gptmaker_url}" width="100%" height="700px" style="border-radius:10px; border:none;"></iframe>',
-        height=700
-    )
+# Sobre o Agente
+st.subheader("Sobre o Agente BMD")
+st.markdown("""
+O **Agente BMD** ajuda a equipe da clínica a:
+- Obter informações rápidas e precisas
+- Melhorar eficiência operacional
+- Evoluir continuamente com base nas interações
+""")
+
+# Evolução
+st.subheader("Evolução do Projeto")
+st.markdown("""
+- **Protótipo Typebot**: Primeira versão de teste  
+- **GPTMaker Bubble**: Chat interativo atual  
+- **Próximos passos**: Melhorias contínuas e memória persistente
+""")
+
+st.markdown("---")
+
+# Call-to-Action
+st.subheader("Converse com o Agente BMD")
+st.markdown(
+    "[Clique aqui para abrir o chat](https://app.gptmaker.ai/widget/3E6A303F3BAA7072AAC7C247DD2D37A8/float.js)"
+)
+st.markdown("O chat abrirá em float no canto inferior direito, pronto para interagir com você!")
+
+st.markdown("---")
+
+# Rodapé
+st.markdown(
+    "Links úteis: [Clínica BMD](https://clinicabmd.com.br) | [Synk AI](https://synk.ai) | [GitHub](https://github.com/lidimoura/agente-bmd)"
+)
