@@ -45,3 +45,7 @@ Acesse a landing page e interaja com o chat do agente no canto inferior direito:
 - [Clínica BMD](https://clinicabmd.com.br)  
 - [Synk AI](https://synk.ai)  
 - [GitHub do projeto](https://github.com/lidimoura/agente-bmd)
+
+## Documentação Detalhada
+Para ver o briefing completo e roadmap do projeto, acesse [docs/briefing.md](docs/briefing.md)
+
