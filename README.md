@@ -13,8 +13,6 @@ O **Agente BMD** é um assistente virtual que ajuda a equipe da clínica a:
 - Melhorar eficiência operacional
 - Garantir melhor qualidade de tempo
 
-> **Nota:** Esta landing page é o protótipo funcional atual, mostrando o chat bubble do GPTMaker em ação.
-
 ---
 
 ## Evolução do Projeto
@@ -42,8 +40,8 @@ Acesse a landing page e interaja com o chat do agente no canto inferior direito:
 ---
 
 ## Links Úteis
-- [Clínica BMD](https://clinicabmd.com.br)  
-- [Synk AI](https://synk.ai)  
+- [Clínica BMD](https://bmdimagem.com.br/))  
+- [Synk AI](https://preview--synk-growth-hub.lovable.app/)  
 - [GitHub do projeto](https://github.com/lidimoura/agente-bmd)
 
 ## Documentação Detalhada
